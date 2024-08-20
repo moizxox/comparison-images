@@ -12,7 +12,7 @@ background: linear-gradient(90deg, rgba(197,193,255,1) 0%, rgba(208,248,255,1) 4
    padding: 30px;
 }
 .heading span{
-    font-size: 40px;
+    font-size: 28px;
     text-align: center;
     color: white;
     padding: 20px;
@@ -153,8 +153,8 @@ input[type="range"] {
     }
 
     .img-compare {
-        width: 100%;
-        height: auto;
+        width: 90%;
+        height: 500px;
         margin-bottom: 20px;
     }
 
