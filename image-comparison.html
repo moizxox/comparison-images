@@ -7,44 +7,38 @@
     <title>Image Comparison</title>
 </head>
 <body>
-<div class="img-compare-wrapper">
-    <!-- First Gallery -->
-    <div class="img-compare">
-        <div class="img-compare-container">
-            <img src="/Images/before.jpg" alt="Before Image 1" class="img-compare-before first">
-            <img src="/Images/after.jpg" alt="After Image 1" class="img-compare-after first">
-            <div class="img-label img-label-before first">Before</div>
-            <div class="img-label img-label-after first">After</div>
-            <div class="slider-items first">
-                <div class="slider-line first"></div>
-                <div class="slider-icon first">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-                    </svg>
+    <div class="img-compare-wrapper">
+        <div class="img-compare">
+            <div class="img-compare-container">
+                <img src="/Images/before.jpg" alt="Before Image" class="img-compare-before">
+                <div class="slider-items">
+                    <div class="slider-line"></div>
+                    <div class="slider-icon">
+                        <!-- SVG Icon -->
+                    </div>
                 </div>
+                <img src="/Images/after.jpg" alt="After Image" class="img-compare-after">
+                <div class="img-label img-label-before">Before</div>
+                <div class="img-label img-label-after">After</div>
+                <input type="range" class="slider" min="0" max="100" value="50">
             </div>
-            <input type="range" name="slider" id="slider1" min="0" max="100" value="50">
+        </div>
+        <div class="img-compare">
+            <div class="img-compare-container">
+                <img src="/Images/before.jpg" alt="Before Image" class="img-compare-before">
+                <div class="slider-items">
+                    <div class="slider-line"></div>
+                    <div class="slider-icon">
+                        <!-- SVG Icon -->
+                    </div>
+                </div>
+                <img src="/Images/after.jpg" alt="After Image" class="img-compare-after">
+                <div class="img-label img-label-before">Before</div>
+                <div class="img-label img-label-after">After</div>
+                <input type="range" class="slider" min="0" max="100" value="50">
+            </div>
         </div>
     </div>
-    <!-- Second Gallery -->
-    <div class="img-compare">
-        <div class="img-compare-container">
-            <img src="/Images/before.jpg" alt="Before Image 2" class="img-compare-before second">
-            <img src="/Images/after.jpg" alt="After Image 2" class="img-compare-after second">
-            <div class="img-label img-label-before second">Before</div>
-            <div class="img-label img-label-after second">After</div>
-            <div class="slider-items second">
-                <div class="slider-line second"></div>
-                <div class="slider-icon second">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-                    </svg>
-                </div>
-            </div>
-            <input type="range" name="slider" id="slider2" min="0" max="100" value="50">
-        </div>
-    </div>
-</div>
+    <script src="image-comparison.js"></script>
 </body>
-<script src="image-comparison.js"></script>
 </html>

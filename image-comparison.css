@@ -10,43 +10,40 @@ body {
     justify-content: space-between;
     margin: 40px auto;
     padding: 0 40px;
-    max-width: 1000px; /* Ensures both galleries fit on larger screens */
+    max-width: 1080px;
 }
 
 .img-compare {
-    width: 48%; /* Adjusts the width so both galleries fit side by side */
+    width: 500px;
+    height: 500px;
     position: relative;
-    padding-top: 48%; /* Maintains a square aspect ratio based on width */
 }
 
 .img-compare .img-compare-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.img-compare img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.img-compare img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    object-position: left;
+    object-position: center;
 }
 
-img.img-compare-before {
-    position: absolute;
-    top: 0;
-    width: 50%;
+.img-compare-before {
+    clip-path: inset(0 50% 0 0);
+    z-index: 2;
 }
 
-input[type="range"] {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
+.img-compare-after {
+    z-index: 1;
 }
 
 .slider-line {
@@ -57,6 +54,7 @@ input[type="range"] {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    z-index: 3;
 }
 
 .slider-icon {
@@ -69,10 +67,22 @@ input[type="range"] {
     background-color: white;
     border-radius: 50%;
     padding: 10px;
+    z-index: 3;
+}
+
+input[type="range"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 4;
 }
 
 .slider-items {
-    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
 }
 
 /* Labels for Before and After */
@@ -84,6 +94,7 @@ input[type="range"] {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
+    z-index: 4;
 }
 
 .img-label-before {
@@ -100,12 +111,13 @@ input[type="range"] {
 @media screen and (max-width: 768px) {
     .img-compare-wrapper {
         flex-direction: column;
+        align-items: center;
         padding: 0 20px;
     }
 
     .img-compare {
         width: 100%;
-        padding-top: 100%; /* Maintain square ratio on mobile */
+        height: auto;
         margin-bottom: 20px;
     }
 
